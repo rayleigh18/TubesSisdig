@@ -1,0 +1,16 @@
+
+State Machine - |color_rom_vhd|moveBox:box2|p_state
+Name p_state.A p_state.Kn p_state.Kr p_state.B p_state.S 
+p_state.S 0 0 0 0 0 
+p_state.B 0 0 0 1 1 
+p_state.Kr 0 0 1 0 1 
+p_state.Kn 0 1 0 0 1 
+p_state.A 1 0 0 0 1 
+
+State Machine - |color_rom_vhd|moveBox:box1|p_state
+Name p_state.A p_state.Kn p_state.Kr p_state.B p_state.S 
+p_state.S 0 0 0 0 0 
+p_state.B 0 0 0 1 1 
+p_state.Kr 0 0 1 0 1 
+p_state.Kn 0 1 0 0 1 
+p_state.A 1 0 0 0 1 

@@ -1,0 +1,69 @@
+{C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/vga.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/vga.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity vga
+-- Compiling architecture behavioral of vga
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/ballMovement.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/ballMovement.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity ballmovement
+-- Compiling architecture behavioural of ballmovement
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/top_level_vhd.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/top_level_vhd.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity top_level_vhd
+-- Compiling architecture behavioral of top_level_vhd
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/display_vhd.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/display_vhd.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity display_vhd
+-- Compiling architecture behavioral of display_vhd
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/CLOCKDIV.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/CLOCKDIV.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity clockdiv
+-- Compiling architecture behavioural of clockdiv
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/moveBox.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/moveBox.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity movebox
+-- Compiling architecture behavioral of movebox
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/pll_vhd.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/pll_vhd.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity pll_vhd
+-- Compiling architecture syn of pll_vhd
+
+} {} {}} {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/color_rom_vhd.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/color_rom_vhd.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity color_rom_vhd
+-- Compiling architecture behavioral of color_rom_vhd
+
+} {} {}}

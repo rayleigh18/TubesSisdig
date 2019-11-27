@@ -1,0 +1,249 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\91\modelsim_ase\examples
+Eballmovement
+Z0 w1574412386
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z2 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dC:\Users\Oktavianus Irvan\Desktop\Tubes Sisdig - canMoveAndDie - Copy
+Z5 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/ballMovement.vhd
+Z6 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/ballMovement.vhd
+l0
+L6
+VLVET3VFFX2SZfUHTUmeB?2
+Z7 OV;C;6.5b;42
+32
+Z8 o-work work -2002 -explicit -O0
+Z9 tExplicit 1
+!s100 a5<o4_QgFY?gM:OF8<SlB3
+Abehavioural
+R1
+R2
+R3
+DEx4 work 12 ballmovement 0 22 LVET3VFFX2SZfUHTUmeB?2
+l36
+L21
+VfafHFI_0Mm=CT66W?C@:H0
+R7
+32
+Z10 Mx3 4 ieee 14 std_logic_1164
+Z11 Mx2 4 ieee 15 std_logic_arith
+Z12 Mx1 4 ieee 18 std_logic_unsigned
+R8
+R9
+!s100 N@YkF[I7k=RNlzgOD:@Z42
+Eclockdiv
+Z13 w1574161685
+R3
+R4
+Z14 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/CLOCKDIV.vhd
+Z15 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/CLOCKDIV.vhd
+l0
+L4
+V[0;z7MaaZ6DCLKCJ?Vb>Y2
+R7
+32
+R8
+R9
+!s100 WLz@0Uf<3P0IA8cK5k1n92
+Abehavioural
+R3
+DEx4 work 8 clockdiv 0 22 [0;z7MaaZ6DCLKCJ?Vb>Y2
+l11
+L10
+VOa>i;<;>AjO=QkcDZ^Gaj2
+R7
+32
+Z16 Mx1 4 ieee 14 std_logic_1164
+R8
+R9
+!s100 05oY[L2miMcNlMmNE[1VI2
+Ecolor_rom_vhd
+Z17 w1574595898
+R1
+R2
+R3
+R4
+Z18 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/color_rom_vhd.vhd
+Z19 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/color_rom_vhd.vhd
+l0
+L6
+VM99V=mmXg[>ME0=CBFXEm3
+R7
+32
+R8
+R9
+!s100 eHLHG?;=T0`O29<9MH0LQ3
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 color_rom_vhd 0 22 M99V=mmXg[>ME0=CBFXEm3
+l101
+L20
+Vl8Df]M=lIUWK=Bj?_8I=52
+R7
+32
+R10
+R11
+R12
+R8
+R9
+!s100 2TZe4b_<o`KJ[Pd^@_iDV3
+Edisplay_vhd
+Z20 w1573786498
+R1
+R2
+R3
+R4
+Z21 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/display_vhd.vhd
+Z22 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/display_vhd.vhd
+l0
+L6
+Vz9O7NC[7LbcGZLl<Ve_jg3
+R7
+32
+R8
+R9
+!s100 PCJNCjh:gPA0C`JBA4Y@:0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 11 display_vhd 0 22 z9O7NC[7LbcGZLl<Ve_jg3
+l62
+L20
+VSEkQ9i1j=YLOHFS4`ElJa3
+R7
+32
+R10
+R11
+R12
+R8
+R9
+!s100 LTBeIXNY7D98<P:NJ0=Qb0
+Emovebox
+Z23 w1574391211
+R1
+R2
+R3
+R4
+Z24 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/moveBox.vhd
+Z25 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/moveBox.vhd
+l0
+L6
+VKT01d<^zc@FdAeiU5D=[H0
+R7
+32
+R8
+R9
+!s100 :9FKF[YA>73gKGE@KacaD0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 7 movebox 0 22 KT01d<^zc@FdAeiU5D=[H0
+l40
+L22
+VVCkRE1lG73C:SN;KbR[DC3
+R7
+32
+R10
+R11
+R12
+R8
+R9
+!s100 0@SH6aZf5gAFPz7^0?HmB3
+Epll_vhd
+Z26 w1573742538
+R3
+R4
+Z27 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/pll_vhd.vhd
+Z28 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/pll_vhd.vhd
+l0
+L42
+VacUFzXO6525IJbUQc7HBb1
+R7
+32
+R8
+R9
+!s100 ]J@ThYgPeBnoEzfM`OKmU2
+Asyn
+R3
+DEx4 work 7 pll_vhd 0 22 acUFzXO6525IJbUQc7HBb1
+l128
+L52
+VLGWJ`I0g8^EZAUUcfB5A>0
+R7
+32
+R16
+R8
+R9
+!s100 `<1[UUg]LX@J<aC4jETOK0
+Etop_level_vhd
+Z29 w1573786558
+R1
+R2
+R3
+R4
+Z30 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/top_level_vhd.vhd
+Z31 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/top_level_vhd.vhd
+l0
+L6
+VRHfC@A^5D?505o>ZBQOQZ0
+R7
+32
+R8
+R9
+!s100 oYzQM0lmLa9??]0jT2Lmi2
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 top_level_vhd 0 22 RHfC@A^5D?505o>ZBQOQZ0
+l39
+L21
+V2@nelSPzz3P9N=`?iV=;[2
+R7
+32
+R10
+R11
+R12
+R8
+R9
+!s100 TzYko0]kIVCeGSG6WQRiP2
+Evga
+Z32 w1573784204
+R1
+R2
+R3
+R4
+Z33 8C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/vga.vhd
+Z34 FC:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/vga.vhd
+l0
+L6
+V<54J_FCFczTNV>YcG@2dd3
+!s100 e@LD75T74e9R;mD_mf>L^1
+R7
+32
+R8
+R9
+Abehavioral
+R1
+R2
+R3
+DEx4 work 3 vga 0 22 <54J_FCFczTNV>YcG@2dd3
+l42
+L21
+V:P;Z83;Pe5<f2b4P;ACQ90
+!s100 C8TY0egAoS6FX7jN2KKO<0
+R7
+32
+R10
+R11
+R12
+R8
+R9

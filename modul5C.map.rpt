@@ -1,0 +1,591 @@
+Analysis & Synthesis report for modul5C
+Wed Nov 27 20:58:51 2019
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |color_rom_vhd|moveBox:box2|p_state
+  9. State Machine - |color_rom_vhd|moveBox:box1|p_state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "ballMovement:ball|CLOCKDIV:realClock2"
+ 15. Port Connectivity Checks: "ballMovement:ball|CLOCKDIV:real_clock"
+ 16. Port Connectivity Checks: "ballMovement:ball"
+ 17. Port Connectivity Checks: "moveBox:box2"
+ 18. Port Connectivity Checks: "moveBox:box1|CLOCKDIV:realClock"
+ 19. Port Connectivity Checks: "moveBox:box1"
+ 20. Port Connectivity Checks: "CLOCKDIV:realClock"
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 27 20:58:50 2019   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; modul5C                                 ;
+; Top-level Entity Name              ; color_rom_vhd                           ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 856                                     ;
+;     Total combinational functions  ; 856                                     ;
+;     Dedicated logic registers      ; 218                                     ;
+; Total registers                    ; 218                                     ;
+; Total pins                         ; 53                                      ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 0                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; color_rom_vhd      ; modul5C            ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+; ballMovement.vhd                 ; yes             ; User VHDL File  ; C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/ballMovement.vhd  ;
+; CLOCKDIV.vhd                     ; yes             ; User VHDL File  ; C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/CLOCKDIV.vhd      ;
+; moveBox.vhd                      ; yes             ; User VHDL File  ; C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/moveBox.vhd       ;
+; color_rom_vhd.vhd                ; yes             ; User VHDL File  ; C:/Users/Oktavianus Irvan/Desktop/Tubes Sisdig - canMoveAndDie - Copy/color_rom_vhd.vhd ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 856   ;
+;                                             ;       ;
+; Total combinational functions               ; 856   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 182   ;
+;     -- 3 input functions                    ; 317   ;
+;     -- <=2 input functions                  ; 357   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 365   ;
+;     -- arithmetic mode                      ; 491   ;
+;                                             ;       ;
+; Total registers                             ; 218   ;
+;     -- Dedicated logic registers            ; 218   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 53    ;
+; Maximum fan-out node                        ; i_clk ;
+; Maximum fan-out                             ; 101   ;
+; Total fan-out                               ; 3078  ;
+; Average fan-out                             ; 2.73  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; |color_rom_vhd              ; 856 (243)         ; 218 (2)      ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |color_rom_vhd                                       ; work         ;
+;    |CLOCKDIV:realClock|     ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|CLOCKDIV:realClock                    ;              ;
+;    |ballMovement:ball|      ; 305 (230)         ; 111 (45)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|ballMovement:ball                     ;              ;
+;       |CLOCKDIV:realClock2| ; 33 (33)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|ballMovement:ball|CLOCKDIV:realClock2 ;              ;
+;       |CLOCKDIV:real_clock| ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|ballMovement:ball|CLOCKDIV:real_clock ;              ;
+;    |moveBox:box1|           ; 128 (127)         ; 36 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|moveBox:box1                          ;              ;
+;       |CLOCKDIV:realClock|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|moveBox:box1|CLOCKDIV:realClock       ;              ;
+;    |moveBox:box2|           ; 169 (127)         ; 68 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|moveBox:box2                          ;              ;
+;       |CLOCKDIV:realClock|  ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |color_rom_vhd|moveBox:box2|CLOCKDIV:realClock       ;              ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |color_rom_vhd|moveBox:box2|p_state                      ;
++------------+-----------+------------+------------+-----------+-----------+
+; Name       ; p_state.A ; p_state.Kn ; p_state.Kr ; p_state.B ; p_state.S ;
++------------+-----------+------------+------------+-----------+-----------+
+; p_state.S  ; 0         ; 0          ; 0          ; 0         ; 0         ;
+; p_state.B  ; 0         ; 0          ; 0          ; 1         ; 1         ;
+; p_state.Kr ; 0         ; 0          ; 1          ; 0         ; 1         ;
+; p_state.Kn ; 0         ; 1          ; 0          ; 0         ; 1         ;
+; p_state.A  ; 1         ; 0          ; 0          ; 0         ; 1         ;
++------------+-----------+------------+------------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |color_rom_vhd|moveBox:box1|p_state                      ;
++------------+-----------+------------+------------+-----------+-----------+
+; Name       ; p_state.A ; p_state.Kn ; p_state.Kr ; p_state.B ; p_state.S ;
++------------+-----------+------------+------------+-----------+-----------+
+; p_state.S  ; 0         ; 0          ; 0          ; 0         ; 0         ;
+; p_state.B  ; 0         ; 0          ; 0          ; 1         ; 1         ;
+; p_state.Kr ; 0         ; 0          ; 1          ; 0         ; 1         ;
+; p_state.Kn ; 0         ; 1          ; 0          ; 0         ; 1         ;
+; p_state.A  ; 1         ; 0          ; 0          ; 0         ; 1         ;
++------------+-----------+------------+------------+-----------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++-------------------------------------------+-------------------------------------------------------------+
+; Register name                             ; Reason for Removal                                          ;
++-------------------------------------------+-------------------------------------------------------------+
+; ballMovement:ball|speedY[1..30]           ; Merged with ballMovement:ball|speedY[31]                    ;
+; ballMovement:ball|speedX[2..31]           ; Merged with ballMovement:ball|speedX[1]                     ;
+; CLOCKDIV:realClock|count[0]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[0]  ;
+; CLOCKDIV:realClock|count[1]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[1]  ;
+; CLOCKDIV:realClock|count[2]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[2]  ;
+; CLOCKDIV:realClock|count[3]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[3]  ;
+; CLOCKDIV:realClock|count[4]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[4]  ;
+; CLOCKDIV:realClock|count[5]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[5]  ;
+; CLOCKDIV:realClock|count[6]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[6]  ;
+; CLOCKDIV:realClock|count[7]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[7]  ;
+; CLOCKDIV:realClock|count[8]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[8]  ;
+; CLOCKDIV:realClock|count[9]               ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[9]  ;
+; CLOCKDIV:realClock|count[10]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[10] ;
+; CLOCKDIV:realClock|count[11]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[11] ;
+; CLOCKDIV:realClock|count[12]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[12] ;
+; CLOCKDIV:realClock|count[13]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[13] ;
+; CLOCKDIV:realClock|count[14]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[14] ;
+; CLOCKDIV:realClock|count[15]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[15] ;
+; CLOCKDIV:realClock|count[16]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[16] ;
+; CLOCKDIV:realClock|count[17]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[17] ;
+; CLOCKDIV:realClock|count[18]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[18] ;
+; CLOCKDIV:realClock|count[19]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[19] ;
+; CLOCKDIV:realClock|count[20]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[20] ;
+; CLOCKDIV:realClock|count[21]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[21] ;
+; CLOCKDIV:realClock|count[22]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[22] ;
+; CLOCKDIV:realClock|count[23]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[23] ;
+; CLOCKDIV:realClock|count[24]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[24] ;
+; CLOCKDIV:realClock|count[25]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[25] ;
+; CLOCKDIV:realClock|count[26]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[26] ;
+; CLOCKDIV:realClock|count[27]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[27] ;
+; CLOCKDIV:realClock|count[28]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[28] ;
+; CLOCKDIV:realClock|count[29]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[29] ;
+; CLOCKDIV:realClock|count[30]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[30] ;
+; CLOCKDIV:realClock|count[31]              ; Merged with ballMovement:ball|CLOCKDIV:realClock2|count[31] ;
+; moveBox:box1|CLOCKDIV:realClock|count[0]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[0]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[1]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[1]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[2]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[2]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[3]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[3]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[4]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[4]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[5]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[5]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[6]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[6]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[7]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[7]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[8]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[8]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[9]  ; Merged with moveBox:box2|CLOCKDIV:realClock|count[9]        ;
+; moveBox:box1|CLOCKDIV:realClock|count[10] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[10]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[11] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[11]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[12] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[12]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[13] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[13]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[14] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[14]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[15] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[15]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[16] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[16]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[17] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[17]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[18] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[18]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[19] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[19]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[20] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[20]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[21] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[21]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[22] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[22]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[23] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[23]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[24] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[24]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[25] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[25]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[26] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[26]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[27] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[27]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[28] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[28]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[29] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[29]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[30] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[30]       ;
+; moveBox:box1|CLOCKDIV:realClock|count[31] ; Merged with moveBox:box2|CLOCKDIV:realClock|count[31]       ;
+; ballMovement:ball|speedY[0]               ; Stuck at VCC due to stuck port data_in                      ;
+; ballMovement:ball|speedX[0]               ; Stuck at VCC due to stuck port data_in                      ;
+; moveBox:box2|p_state.Kr                   ; Lost fanout                                                 ;
+; moveBox:box2|p_state.Kn                   ; Lost fanout                                                 ;
+; moveBox:box1|p_state.Kr                   ; Lost fanout                                                 ;
+; moveBox:box1|p_state.Kn                   ; Lost fanout                                                 ;
+; ballMovement:ball|posX[11..31]            ; Lost fanout                                                 ;
+; signalStart                               ; Merged with state                                           ;
+; Total Number of Removed Registers = 152   ;                                                             ;
++-------------------------------------------+-------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 218   ;
+; Number of registers using Synchronous Clear  ; 96    ;
+; Number of registers using Synchronous Load   ; 43    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; moveBox:box2|pos_y[7]                  ; 7       ;
+; moveBox:box2|pos_y[6]                  ; 7       ;
+; moveBox:box2|pos_y[5]                  ; 7       ;
+; moveBox:box2|pos_y[4]                  ; 7       ;
+; moveBox:box1|pos_y[7]                  ; 7       ;
+; moveBox:box1|pos_y[6]                  ; 7       ;
+; moveBox:box1|pos_y[5]                  ; 7       ;
+; moveBox:box1|pos_y[4]                  ; 7       ;
+; lastWin                                ; 21      ;
+; Total number of inverted registers = 9 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |color_rom_vhd|ballMovement:ball|posY[7] ;
+; 9:1                ; 28 bits   ; 168 LEs       ; 84 LEs               ; 84 LEs                 ; Yes        ; |color_rom_vhd|moveBox:box1|pos_y[2]     ;
+; 9:1                ; 28 bits   ; 168 LEs       ; 84 LEs               ; 84 LEs                 ; Yes        ; |color_rom_vhd|moveBox:box2|pos_y[17]    ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |color_rom_vhd|moveBox:box1|pos_y[4]     ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |color_rom_vhd|moveBox:box2|pos_y[7]     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |color_rom_vhd|moveBox:box2|p_state      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |color_rom_vhd|moveBox:box1|p_state      ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; No         ; |color_rom_vhd|o_red                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ballMovement:ball|CLOCKDIV:realClock2" ;
++------------+-------+----------+-----------------------------------+
+; Port       ; Type  ; Severity ; Details                           ;
++------------+-------+----------+-----------------------------------+
+; div[8..4]  ; Input ; Info     ; Stuck at VCC                      ;
+; div[31..9] ; Input ; Info     ; Stuck at GND                      ;
+; div[1..0]  ; Input ; Info     ; Stuck at GND                      ;
+; div[3]     ; Input ; Info     ; Stuck at GND                      ;
+; div[2]     ; Input ; Info     ; Stuck at VCC                      ;
++------------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ballMovement:ball|CLOCKDIV:real_clock" ;
++-------------+-------+----------+----------------------------------+
+; Port        ; Type  ; Severity ; Details                          ;
++-------------+-------+----------+----------------------------------+
+; div[17..14] ; Input ; Info     ; Stuck at VCC                     ;
+; div[31..18] ; Input ; Info     ; Stuck at GND                     ;
+; div[11..8]  ; Input ; Info     ; Stuck at GND                     ;
+; div[6..5]   ; Input ; Info     ; Stuck at GND                     ;
+; div[3..0]   ; Input ; Info     ; Stuck at GND                     ;
+; div[13]     ; Input ; Info     ; Stuck at GND                     ;
+; div[12]     ; Input ; Info     ; Stuck at VCC                     ;
+; div[7]      ; Input ; Info     ; Stuck at VCC                     ;
+; div[4]      ; Input ; Info     ; Stuck at VCC                     ;
++-------------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ballMovement:ball"                                                                                 ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; stop                ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pos1x[6..4]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; pos1x[9..7]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pos1x[3..2]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pos1x[1]            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; pos1x[0]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pos2x[8..1]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; pos2x[9]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pos2x[0]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; radball[31..11]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; boundyatas[31..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundyatas[3]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundyatas[2]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundyatas[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundyatas[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundybawah[4..3]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundybawah[31..10] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundybawah[8..7]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundybawah[2..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundybawah[9]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundybawah[6]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundybawah[5]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkiri[8..6]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundxkiri[2..1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundxkiri[31..9]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkiri[5]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkiri[4]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundxkiri[3]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkiri[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkanan[31..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkanan[3]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundxkanan[2]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; boundxkanan[1]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; boundxkanan[0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "moveBox:box2"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; speed[31..1] ; Input ; Info     ; Stuck at GND ;
+; speed[0]     ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "moveBox:box1|CLOCKDIV:realClock" ;
++-------------+-------+----------+----------------------------+
+; Port        ; Type  ; Severity ; Details                    ;
++-------------+-------+----------+----------------------------+
+; div[15..14] ; Input ; Info     ; Stuck at VCC               ;
+; div[9..8]   ; Input ; Info     ; Stuck at VCC               ;
+; div[31..16] ; Input ; Info     ; Stuck at GND               ;
+; div[13..10] ; Input ; Info     ; Stuck at GND               ;
+; div[3..0]   ; Input ; Info     ; Stuck at GND               ;
+; div[7]      ; Input ; Info     ; Stuck at GND               ;
+; div[6]      ; Input ; Info     ; Stuck at VCC               ;
+; div[5]      ; Input ; Info     ; Stuck at GND               ;
+; div[4]      ; Input ; Info     ; Stuck at VCC               ;
++-------------+-------+----------+----------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "moveBox:box1"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; speed[31..1] ; Input ; Info     ; Stuck at GND ;
+; speed[0]     ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "CLOCKDIV:realClock" ;
++------------+-------+----------+----------------+
+; Port       ; Type  ; Severity ; Details        ;
++------------+-------+----------+----------------+
+; div[8..4]  ; Input ; Info     ; Stuck at VCC   ;
+; div[31..9] ; Input ; Info     ; Stuck at GND   ;
+; div[1..0]  ; Input ; Info     ; Stuck at GND   ;
+; div[3]     ; Input ; Info     ; Stuck at GND   ;
+; div[2]     ; Input ; Info     ; Stuck at VCC   ;
++------------+-------+----------+----------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Wed Nov 27 20:58:41 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off modul5C -c modul5C
+Info: Found 2 design units, including 1 entities, in source file ballmovement.vhd
+    Info: Found design unit 1: ballMovement-behavioural
+    Info: Found entity 1: ballMovement
+Info: Found 2 design units, including 1 entities, in source file clockdiv.vhd
+    Info: Found design unit 1: CLOCKDIV-behavioural
+    Info: Found entity 1: CLOCKDIV
+Info: Found 2 design units, including 1 entities, in source file movebox.vhd
+    Info: Found design unit 1: moveBox-behavioral
+    Info: Found entity 1: moveBox
+Info: Found 2 design units, including 1 entities, in source file color_rom_vhd.vhd
+    Info: Found design unit 1: color_rom_vhd-behavioral
+    Info: Found entity 1: color_rom_vhd
+Info: Found 2 design units, including 1 entities, in source file display_vhd.vhd
+    Info: Found design unit 1: display_vhd-behavioral
+    Info: Found entity 1: display_vhd
+Info: Found 2 design units, including 1 entities, in source file pll_vhd.vhd
+    Info: Found design unit 1: pll_vhd-SYN
+    Info: Found entity 1: pll_vhd
+Info: Found 2 design units, including 1 entities, in source file top_level_vhd.vhd
+    Info: Found design unit 1: top_level_vhd-behavioral
+    Info: Found entity 1: top_level_vhd
+Info: Found 2 design units, including 1 entities, in source file vga.vhd
+    Info: Found design unit 1: vga-behavioral
+    Info: Found entity 1: vga
+Info: Elaborating entity "color_rom_vhd" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(38): used explicit default value for signal "speedbox" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(40): used explicit default value for signal "stop" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(42): used explicit default value for signal "boundYatas" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(43): used explicit default value for signal "boundYbawah" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(44): used explicit default value for signal "boundXkiri" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at color_rom_vhd.vhd(45): used explicit default value for signal "boundXkanan" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at color_rom_vhd.vhd(204): signal "xOB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at color_rom_vhd.vhd(204): signal "yOB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "CLOCKDIV" for hierarchy "CLOCKDIV:realClock"
+Info: Elaborating entity "moveBox" for hierarchy "moveBox:box1"
+Info: Elaborating entity "ballMovement" for hierarchy "ballMovement:ball"
+Warning (10540): VHDL Signal Declaration warning at ballMovement.vhd(24): used explicit default value for signal "ballRadius" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ballMovement.vhd(26): used explicit default value for signal "hei" because signal was never assigned a value
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "o_blue[6]" is stuck at GND
+Info: 25 registers lost all their fanouts during netlist optimizations. The first 25 are displayed below.
+    Info: Register "moveBox:box2|p_state.Kr" lost all its fanouts during netlist optimizations.
+    Info: Register "moveBox:box2|p_state.Kn" lost all its fanouts during netlist optimizations.
+    Info: Register "moveBox:box1|p_state.Kr" lost all its fanouts during netlist optimizations.
+    Info: Register "moveBox:box1|p_state.Kn" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "ballMovement:ball|posX[31]" lost all its fanouts during netlist optimizations.
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw8"
+    Warning (15610): No output dependent on input pin "sw7"
+    Warning (15610): No output dependent on input pin "sw6"
+Info: Implemented 911 device resources after synthesis - the final resource count might be different
+    Info: Implemented 29 input pins
+    Info: Implemented 24 output pins
+    Info: Implemented 858 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 254 megabytes
+    Info: Processing ended: Wed Nov 27 20:58:51 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:12
+
+
